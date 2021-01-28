@@ -56,6 +56,7 @@ WHITE = (255, 255, 255)
 BLUE = (0, 0, 255)
 YELLOW = (255, 255, 0)
 RED = (255, 0, 0)
+GREEN = (0, 105, 0)
 
 size = (700, 500)
 screen = pygame.display.set_mode(size)
@@ -66,7 +67,7 @@ paddleA.rect.x = 0
 paddleA.rect.y = 200
 
 paddleB = Paddle(YELLOW, 10, 100)
-paddleB.rect.x = 679
+paddleB.rect.x = 690
 paddleB.rect.y = 200
 
 ball = Ball(RED, 10, 10)
@@ -121,7 +122,7 @@ while carryOn:
     if pygame.sprite.collide_mask(ball, paddleA) or pygame.sprite.collide_mask(ball, paddleB):
         ball.bounce()
 
-    screen.fill(BLACK)
+    screen.fill(GREEN)
     pygame.draw.line(screen, WHITE, [349, 0], [349, 500], 5)
 
     all_sprites_list.draw(screen)
